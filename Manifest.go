@@ -10,7 +10,7 @@ import (
 type Manifest struct {
 	Name            string         `json:"name"`
 	ShortName       string         `json:"short_name"`
-	Description     string         `json:"description"`
+	Description     string         `json:"description,omitempty"`
 	Icons           []Icon         `json:"icons,omitempty"`
 	StartURL        string         `json:"start_url"`
 	Display         string         `json:"display"`
