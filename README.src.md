@@ -2,6 +2,6 @@
 
 {go:header}
 
-Web manifest.
+Utilities for dealing with [web manifests](https://www.w3.org/TR/appmanifest/).
 
 {go:footer}

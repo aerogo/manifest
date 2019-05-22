@@ -6,7 +6,7 @@
 [![Coverage][coverage-image]][coverage-url]
 [![Patreon][patreon-image]][patreon-url]
 
-Web manifest.
+Utilities for dealing with [web manifests](https://www.w3.org/TR/appmanifest/).
 
 ## Style
 
