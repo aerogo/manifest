@@ -1,5 +1,11 @@
 package manifest
 
+import (
+	"os"
+
+	jsoniter "github.com/json-iterator/go"
+)
+
 // Manifest represents a web manifest
 type Manifest struct {
 	Name            string        `json:"name"`
@@ -42,6 +48,29 @@ func New() *Manifest {
 		Language:  "en",
 		ShortName: "Untitled",
 	}
+}
+
+// FromFile creates a new manifest.
+func FromFile(fileName string) (*Manifest, error) {
+	// Open the file
+	file, err := os.Open(fileName)
+
+	if err != nil {
+		return nil, err
+	}
+
+	defer file.Close()
+
+	// Decode JSON
+	webManifest := New()
+	decoder := jsoniter.NewDecoder(file)
+	err = decoder.Decode(webManifest)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return webManifest, nil
 }
 
 // TODO: Warn about short name length (Google Lighthouse)
