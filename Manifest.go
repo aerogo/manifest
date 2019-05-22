@@ -8,19 +8,19 @@ import (
 
 // Manifest represents a web manifest
 type Manifest struct {
-	Name            string        `json:"name"`
-	ShortName       string        `json:"short_name"`
-	Description     string        `json:"description"`
-	Icons           []Icon        `json:"icons,omitempty"`
-	StartURL        string        `json:"start_url"`
-	Display         string        `json:"display"`
-	Orientation     string        `json:"orientation,omitempty"`
-	Language        string        `json:"lang,omitempty"`
-	ThemeColor      string        `json:"theme_color,omitempty"`
-	BackgroundColor string        `json:"background_color,omitempty"`
-	TextDirection   string        `json:"dir,omitempty"`
-	ServiceWorker   ServiceWorker `json:"serviceworker,omitempty"`
-	ScreenShots     []ScreenShot  `json:"screenshots,omitempty"`
+	Name            string         `json:"name"`
+	ShortName       string         `json:"short_name"`
+	Description     string         `json:"description"`
+	Icons           []Icon         `json:"icons,omitempty"`
+	StartURL        string         `json:"start_url"`
+	Display         string         `json:"display"`
+	Orientation     string         `json:"orientation,omitempty"`
+	Language        string         `json:"lang,omitempty"`
+	ThemeColor      string         `json:"theme_color,omitempty"`
+	BackgroundColor string         `json:"background_color,omitempty"`
+	TextDirection   string         `json:"dir,omitempty"`
+	ServiceWorker   *ServiceWorker `json:"serviceworker,omitempty"`
+	ScreenShots     []ScreenShot   `json:"screenshots,omitempty"`
 }
 
 // Icon represents a single icon in the web manifest.
